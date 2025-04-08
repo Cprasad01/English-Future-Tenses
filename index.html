@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>English Future Tenses Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+    <header>
+        <h1>Future Tenses</h1>
+    </header>
+
+    <div class="container">
+        <div class="tense-nav">
+            <button class="tense-btn active" data-tense="future-simple">Simple Future</button>
+            <button class="tense-btn" data-tense="future-continuous">Future Continuous</button>
+            <button class="tense-btn" data-tense="future-perfect">Future Perfect</button>
+            <button class="tense-btn" data-tense="future-perfect-continuous">Future Perfect Continuous</button>
+        </div>
+
+        <!-- Simple Future Content -->
+        <div id="future-simple" class="tense-content active">
+            <h2>Simple Future Tense</h2>
+            <div class="usage-section">
+                <h3>Usage</h3>
+                <ul class="usage-list">
+                    <li>To express a spontaneous decision</li>
+                    <li>To express an offer or promise</li>
+                    <li>To express a prediction</li>
+                    <li>To express a future fact</li>
+                </ul>
+            </div>
+
+            
+            <div class="structure-box">
+                <h3>Structure</h3>
+                <div class="structure-formula">Subject + will / shall + v1 (verb)</div>
+                <h3>Structure For Negative</h3>
+                <div class="structure-formula negative">Subject + will /shall + not (won't) + v1(verb)</div>
+            
+            </div>
+            
+            
+            <div class="examples-section">
+                <h3>Examples</h3>
+                <div class="example">I think I will go to the beach tomorrow.</div>
+                <div class="example">She will help you with your homework.</div>
+                <div class="example">I will drink Tea</div>
+                <div class="example"> I will become a doctor</div>
+                <h3>Examples For Negative</h3>
+                <div class="example negative">I won't (will not) attend the meeting tomorrow.</div>
+                <div class="example negative">He won’t(will not) watch the movie tomorrow.</div>
+                <div class="example negative">She won’t(will not) join the class next week.</div>
+
+            </div>
+            
+            <div class="quiz-section">
+                <div class="quiz-header">
+                    <h3>Simple Future Quiz</h3>
+                </div>
+                
+                <div class="quiz-progress">
+                    <div id="future-simple-progress" class="progress-bar"></div>
+                </div>
+                
+                <div id="future-simple-question" class="question-container"></div>
+                
+                <div class="quiz-navigation">
+                    <button id="future-simple-prev" class="quiz-btn btn-prev" disabled>Previous</button>
+                    <button id="future-simple-next" class="quiz-btn btn-next">Next</button>
+                    <button id="future-simple-submit" class="quiz-btn btn-submit">Submit</button>
+                </div>
+                
+                <div id="future-simple-score" class="score-container">
+                    <div class="score-text">Your Score:</div>
+                    <div id="future-simple-score-value" class="score-value">0%</div>
+                    <div class="score-details">
+                        <h3>Quiz Summary</h3>
+                        <ul id="future-simple-score-details" class="score-details-list"></ul>
+                    </div>
+                    <div class="score-actions">
+                        <button id="future-simple-restart" class="quiz-btn quiz-restart">Restart Quiz</button>
+                        <button id="future-simple-danger" class="quiz-btn btn-danger">Try Again</button>
+                        <button id="future-simple-success" class="quiz-btn btn-success">Well Done!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Future Continuous Content -->
+        <div id="future-continuous" class="tense-content">
+            <h2>Future Continuous Tense</h2>
+            <div class="usage-section">
+                <h3>Usage</h3>
+                <ul class="usage-list">
+                    <li>To describe an action in progress at a specific future time</li>
+                    <li>To describe future events that are fixed or expected</li>
+                    <li>To ask politely about someone's plans</li>
+                </ul>
+            </div>
+
+            
+            <div class="structure-box">
+                <h3>Structure</h3>
+                <div class="structure-formula">Subject + will / shall + be + v4(-ing )</div>
+                <h3>Structure For Negative</h3>
+                <div class="structure-formula negative">Subject + will / shall + not + be + V4 (-ing) </div>
+            </div>
+            
+            
+            <div class="examples-section">
+                <h3>Examples</h3>
+                <div class="example">This time tomorrow, I will be flying to Paris.</div>
+                <div class="example">At 8 PM tonight, we will be watching an IPL match.</div>
+                <div class="example">I will be studying for my exam at this time tomorrow.</div>
+                <div class="example"> She will be attending the conference next Monday.</div>
+                <h3>Examples For Negative</h3>
+                <div class="example negative">I won't be working this weekend.</div>
+                <div class="example negative">I will not be attending the seminar tomorrow.</div>
+                <div class="example negative">They will not be watching the movie at 8 PM.</div>
+            </div>
+            
+            <div class="quiz-section">
+                <div class="quiz-header">
+                    <h3>Future Continuous Quiz</h3>
+                </div>
+                
+                <div class="quiz-progress">
+                    <div id="future-continuous-progress" class="progress-bar"></div>
+                </div>
+                
+                <div id="future-continuous-question" class="question-container"></div>
+                
+                <div class="quiz-navigation">
+                    <button id="future-continuous-prev" class="quiz-btn btn-prev" disabled>Previous</button>
+                    <button id="future-continuous-next" class="quiz-btn btn-next">Next</button>
+                    <button id="future-continuous-submit" class="quiz-btn btn-submit">Submit</button>
+                </div>
+                
+                <div id="future-continuous-score" class="score-container">
+                    <div class="score-text">Your Score:</div>
+                    <div id="future-continuous-score-value" class="score-value">0%</div>
+                    <div class="score-details">
+                        <h3>Quiz Summary</h3>
+                        <ul id="future-continuous-score-details" class="score-details-list"></ul>
+                    </div>
+                    <div class="score-actions">
+                        <button id="future-continuous-restart" class="quiz-btn quiz-restart">Restart Quiz</button>
+                        <button id="future-continuous-danger" class="quiz-btn btn-danger">Try Again</button>
+                        <button id="future-continuous-success" class="quiz-btn btn-success">Well Done!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Future Perfect Content -->
+        <div id="future-perfect" class="tense-content">
+            <h2>Future Perfect Tense</h2>
+
+            <div class="usage-section">
+                <h3>Usage</h3>
+                <ul class="usage-list">
+                    <li>To describe an action that will be completed before a specific time in the future</li>
+                    <li>To express certainty about something that will happen before a certain time</li>
+                </ul>
+            </div>
+            
+            <div class="structure-box">
+                <h3>Structure</h3>
+                <div class="structure-formula">Subject + will have + v3 + obj</div>
+                <h3>Structure For Negative</h3>
+                <div class="structure-formula negative">Subject + will not (won't) have + v3 + obj</div>
+            </div>
+            
+           
+            
+            <div class="examples-section">
+                <h3>Examples</h3>
+                <div class="example">By next year, I will have graduated.</div>
+                <div class="example">By the time you arrive, we will have finished dinner.</div>
+                <div class="example">She will have written the report by Friday.</div>
+                <h3>Examples For Negative</h3>
+                <div class="example negative">I will not have finished my assignment by tonight.</div>
+                <diV class="example negative">He won’t have completed the course by June.</diV>
+                <div class="example negative">She won’t have reached the office before 10 AM.</div>
+            </div>
+            
+            <div class="quiz-section">
+                <div class="quiz-header">
+                    <h3>Future Perfect Quiz</h3>
+                </div>
+                
+                <div class="quiz-progress">
+                    <div id="future-perfect-progress" class="progress-bar"></div>
+                </div>
+                
+                <div id="future-perfect-question" class="question-container"></div>
+                
+                <div class="quiz-navigation">
+                    <button id="future-perfect-prev" class="quiz-btn btn-prev" disabled>Previous</button>
+                    <button id="future-perfect-next" class="quiz-btn btn-next">Next</button>
+                    <button id="future-perfect-submit" class="quiz-btn btn-submit">Submit</button>
+                </div>
+                
+                <div id="future-perfect-score" class="score-container">
+                    <div class="score-text">Your Score:</div>
+                    <div id="future-perfect-score-value" class="score-value">0%</div>
+                    <div class="score-details">
+                        <h3>Quiz Summary</h3>
+                        <ul id="future-perfect-score-details" class="score-details-list"></ul>
+                    </div>
+                    <div class="score-actions">
+                        <button id="future-perfect-restart" class="quiz-btn quiz-restart">Restart Quiz</button>
+                        <button id="future-perfect-danger" class="quiz-btn btn-danger">Try Again</button>
+                        <button id="future-perfect-success" class="quiz-btn btn-success">Well Done!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Future Perfect Continuous Content -->
+        <div id="future-perfect-continuous" class="tense-content">
+            <h2>Future Perfect Continuous Tense</h2>
+            <div class="usage-section">
+                <h3>Usage</h3>
+                <ul class="usage-list">
+                    <li>To emphasize the duration of an action that will be in progress before another time in the future</li>
+                    <li>To show cause and effect in the future</li>
+                </ul>
+            </div>
+            
+            <div class="structure-box">
+                <h3>Structure</h3>
+                <div class="structure-formula">Subject + will have been + v4 (-ing) + obj</div>
+                <h3>Structure For Negative</h3>
+                <div class="structure-formula negative">Subject + will not (won't) have been +v4(-ing) + obj </div>
+            </div>
+            
+       
+            
+            <div class="examples-section">
+                <h3>Examples</h3>
+                <div class="example">By next month, I will have been working here for 5 years.</div>
+                <div class="example">They will have been traveling for 24 hours when they arrive.</div>
+                <div class="example">By 2025, we will have been living in this house for a decade.</div>
+                <h3>Examples For Negative</h3>
+                <div class="example negative">I won't have been waiting for more than an hour.</div>
+                <div class="example negative">I will not have been working here for long by next year.</div>
+                <div class="example negative">They will not have been studying for the test since morning.</div>
+
+            </div>
+            
+            <div class="quiz-section">
+                <div class="quiz-header">
+                    <h3>Future Perfect Continuous Quiz</h3>
+                </div>
+                
+                <div class="quiz-progress">
+                    <div id="future-perfect-continuous-progress" class="progress-bar"></div>
+                </div>
+                
+                <div id="future-perfect-continuous-question" class="question-container"></div>
+                
+                <div class="quiz-navigation">
+                    <button id="future-perfect-continuous-prev" class="quiz-btn btn-prev" disabled>Previous</button>
+                    <button id="future-perfect-continuous-next" class="quiz-btn btn-next">Next</button>
+                    <button id="future-perfect-continuous-submit" class="quiz-btn btn-submit">Submit</button>
+                </div>
+                
+                <div id="future-perfect-continuous-score" class="score-container">
+                    <div class="score-text">Your Score:</div>
+                    <div id="future-perfect-continuous-score-value" class="score-value">0%</div>
+                    <div class="score-details">
+                        <h3>Quiz Summary</h3>
+                        <ul id="future-perfect-continuous-score-details" class="score-details-list"></ul>
+                    </div>
+                    <div class="score-actions">
+                        <button id="future-perfect-continuous-restart" class="quiz-btn quiz-restart">Restart Quiz</button>
+                        <button id="future-perfect-continuous-danger" class="quiz-btn btn-danger">Try Again</button>
+                        <button id="future-perfect-continuous-success" class="quiz-btn btn-success">Well Done!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

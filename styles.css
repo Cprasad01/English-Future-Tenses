@@ -1,0 +1,479 @@
+:root {
+    --primary: #0077b6;        /* Vibrant Blue */
+    --secondary: #7209b7;      /* Deep Purple */
+    --accent: #f48c06;         /* Bright Orange */
+    --light: #f9f9f9;          /* Light Background */
+    --dark: #212529;           /* Dark Text */
+    --gray: #6c757d;           /* Neutral Gray */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color:whitesmoke;
+    color: var(--dark);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 1rem auto;
+    padding: 0 15px;
+}
+
+/* Tense Navigation */
+.tense-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.tense-btn {
+    flex: 1 1 160px;
+    max-width: 220px;
+    padding: 10px 15px;
+    background: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 14px;
+    text-align: center;
+}
+
+.tense-btn.active {
+    background: var(--primary);
+    color: white;
+}
+
+.tense-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Tense Content */
+.tense-content {
+    display: none;
+    background: white;
+    border-radius: 10px;
+    padding: 1.2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+}
+
+.tense-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tense-content h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+    font-size: 1.4rem;
+}
+
+.structure-box {
+    background-color: #f1f8fe;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    border-left: 4px solid var(--primary);
+}
+
+.structure-box h3 {
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.structure-formula {
+    font-family: 'Courier New', monospace;
+    background: white;
+    padding: 0.8rem;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: var(--primary);
+    font-size: 0.9rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+.structure-formula.negative {
+    color: var(--accent);
+    margin-top: 0.5rem;
+}
+
+.usage-section, .examples-section {
+    margin: 1rem 0;
+}
+
+.usage-section h3, .examples-section h3 {
+    margin-bottom: 0.8rem;
+    color: var(--dark);
+    font-size: 1.1rem;
+}
+
+.usage-list {
+    list-style-type: none;
+}
+
+.usage-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed #eee;
+    display: flex;
+    font-size: 0.95rem;
+}
+
+.usage-list li:before {
+    content: "•";
+    color: var(--primary);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.example {
+    font-style: italic;
+    color: var(--dark);
+    margin: 0.8rem 0;
+    padding: 0.7rem;
+    background: #f9f9f9;
+    border-left: 3px solid var(--secondary);
+    border-radius: 0 4px 4px 0;
+    font-size: 0.95rem;
+}
+
+.example.negative {
+    border-left-color: var(--accent);
+}
+
+/* Quiz Section */
+.quiz-section {
+    background: white;
+    border-radius: 10px;
+    padding: 1.2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-top: 1.5rem;
+}
+
+.quiz-header {
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+.quiz-header h3 {
+    font-size: 1.2rem;
+    color: var(--primary);
+}
+
+.quiz-progress {
+    height: 8px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    margin-bottom: 1.2rem;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--secondary);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.question-container {
+    margin-bottom: 1.2rem;
+}
+
+.question-text {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.options-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.option {
+    padding: 12px 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    font-size: 0.95rem;
+}
+
+.option:hover {
+    background: #e9ecef;
+}
+
+.option.selected {
+    border-color: var(--primary);
+    background: #e3f2fd;
+}
+
+.option.correct {
+    content: "✅";
+    margin-left: 10px;
+    font-size: 1.2rem;
+    color: green;
+    
+}
+
+.option.incorrect {
+    
+    content: "❌";
+    margin-left: 10px;
+    font-size: 1.2rem;
+    color: red;
+}
+
+.option.touching {
+    transform: scale(0.98);
+    opacity: 0.9;
+}
+
+.explanation {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f5f5f5;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.explanation strong {
+    color: var(--dark);
+}
+
+.quiz-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 1.5rem;
+}
+
+.quiz-btn {
+    flex: 1 1 calc(50% - 8px);
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    text-align: center;
+}
+
+.quiz-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.quiz-btn:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-prev {
+    background: var(--gray);
+}
+
+.btn-next {
+    background: var(--secondary);
+}
+
+.btn-submit {
+    background: var(--accent);
+    flex: 1 1 100%;
+    order: 1;
+}
+
+.score-container {
+    text-align: center;
+    padding: 1.5rem;
+    display: none;
+}
+
+.score-text {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.score-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.score-details {
+    margin-bottom: 1.5rem;
+    text-align: left;
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.score-details h3 {
+    margin-bottom: 0.8rem;
+    color: var(--dark);
+    font-size: 1.1rem;
+}
+
+.score-details-list {
+    list-style-type: none;
+}
+
+.score-details-list li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+.score-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.btn-danger {
+    background: var(--accent);
+    display: none;
+}
+
+.btn-success {
+    background: var(--secondary);
+    display: none;
+}
+
+.quiz-restart {
+    background: var(--primary);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .tense-content {
+        padding: 1.5rem;
+    }
+    
+    .tense-content h2 {
+        font-size: 1.6rem;
+    }
+    
+    .tense-btn {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+    
+    .structure-box, .usage-section, .examples-section {
+        margin: 1.2rem 0;
+    }
+    
+    .structure-formula {
+        font-size: 1rem;
+    }
+    
+    .usage-list li, .example {
+        font-size: 1rem;
+    }
+    
+    .quiz-section {
+        padding: 1.5rem;
+    }
+    
+    .question-text {
+        font-size: 1.2rem;
+    }
+    
+    .option {
+        padding: 15px;
+        font-size: 1rem;
+    }
+    
+    .quiz-btn {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+    
+    .score-container {
+        padding: 2rem;
+    }
+    
+    .score-text {
+        font-size: 1.5rem;
+    }
+    
+    .score-value {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 992px) 
+{
+    .container {
+        padding: 0 20px;
+    }
+    
+    header {
+        padding: 2rem 1rem;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .tense-content {
+        padding: 2rem;
+    }
+    
+    .options-container {
+        gap: 12px;
+    }
+}
