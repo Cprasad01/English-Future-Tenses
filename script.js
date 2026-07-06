@@ -10,6 +10,7 @@ const quizzes = {
                     "They will visit us next week.",
                     "I have finished my homework.",
                     "We were watching a movie."
+                    "she is playing the movie"
                 ],
                 correctAnswer: 1,
                 explanation: "'They will visit us next week' uses 'will + base verb' which is the structure for Simple Future."
